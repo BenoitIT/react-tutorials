@@ -11,8 +11,8 @@ class Movies extends Component {
     render() {
         if(this.state.movies.length===0)return<p className="ml-10 text-green-400 font-bold">there are no movies in database</p>
         return<React.Fragment>
-            <p className="ml-10 text-green-400 font-bold">there are {this.state.movies.length} movies in database</p>
-            <table className="table-fixed bg-blue-100 m-10 w-2/4">
+            <p className="mt-12 text-green-400 font-bold">there are {this.state.movies.length} movies in database</p>
+            <table className="table-fixed bg-blue-100  w-4/4 mt-14">
             <thead className='bg-green-100 '>
                 <th class="px-4 py-2 text-emerald-600">name</th>
                 <th className="px-4 py-2 text-emerald-600">publication_date</th>
@@ -32,7 +32,7 @@ class Movies extends Component {
                     <button  className=" bg-blue-400 px-8 hover:bg-green-300  py-2 ml-2 text-indigo font-medium rounded">update</button></div>
                 </tr>)}
             </tbody>
-        </table>;
+        </table>
         </React.Fragment>
 
     }

@@ -1,12 +1,50 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Counter from './components/counter';
-function App() {
+import {Counters} from './components/counters';
+import NavBar from './components/navBar';
+import Movies from './components/moviesPage';
+import React, { Component } from 'react';
+class App extends Component {
+  state = {
+    counters:[
+        {_id:1,value:0},
+        {_id:2,value:0},
+        {_id:3,value:0},
+        {_id:4,value:0}]
+ }
+ handleDelete=(counterId)=>{
+ const counters=this.state.counters.filter(co=>co._id!==counterId);
+ this.setState({counters});
+ };
+ handleReset=()=>{
+    const counters=this.state.counters.map(co=>{
+        co.value=0
+        return co
+    })
+
+        this.setState({counters})
+ };
+ handleIncrement=(counter)=>{
+    const counters=[...this.state.counters]
+    const index=counters.indexOf(counter)
+    counters[index]={...counter};
+    counters[index].value++;
+    this.setState({counters})
+ }
+ render(){
   return (
-<div className="Counter">
-<Counter/>
-</div>
+<React.Fragment>
+<NavBar numberings={this.state.counters.filter(cou=>cou.value>0 ).length}/>
+<main className='container flex justify-between'>
+  <div>
+  <Counters onReset={this.handleReset} onDeleting={this.handleDelete} onIncrement={this.handleIncrement} counters={this.state.counters}/>
+  </div>
+  <div >
+  <Movies/>
+  </div>
+</main>
+</React.Fragment>
   );
-}
+}}
 
 export default App;

@@ -1,5 +1,5 @@
 {
-  "name": "new-app",
+  "name": "react-tutorials",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -50,10 +50,10 @@
     "type": "git",
     "url": "git+https://github.com/BenoitIT/react-tutorials.git"
   },
-  "author": "",
+  "author": "bennods",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/BenoitIT/react-tutorials/issues"
   },
-  "homepage": "https://github.com/BenoitIT/react-tutorials#readme"
+  "homepage": "http://index.html"
 }
