@@ -4,6 +4,7 @@ import {Counters} from './components/counters';
 import NavBar from './components/navBar';
 import Movies from './components/moviesPage';
 import React, { Component } from 'react';
+
 class App extends Component {
   state = {
     counters:[
@@ -41,6 +42,7 @@ class App extends Component {
   </div>
   <div >
   <Movies/>
+
   </div>
 </main>
 </React.Fragment>

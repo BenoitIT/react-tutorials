@@ -8,7 +8,7 @@ return <React.Fragment>
     <div className="flex justify-between">
     <span className={classes}>{this.stateformat()}</span>
     <button onClick={this.props.onIncrement}className="bg-blue-400 rounded text-white font-bold ml-8 h-6 px-5 hover:bg-sky-200 text-gray ">increment</button>
-    <button onClick={()=>this.props.onDelete(this.props.id)} className="bg-red-400 text-white h-6 px-5 ml-10 font-bold">Delete</button>
+    <button onClick={()=>this.props.onDelete(this.props.id)} className="bg-green-400 text-white h-6 px-5 ml-10 font-bold">Delete</button>
    </div>
 
 </React.Fragment>;
