@@ -33,12 +33,13 @@ class App extends Component {
     this.setState({counters})
  }
  render(){
+  const{counters}=this.state;
   return (
 <React.Fragment>
-<NavBar numberings={this.state.counters.filter(cou=>cou.value>0 ).length}/>
+<NavBar numberings={counters.filter(cou=>cou.value>0 ).length}/>
 <main className='container flex justify-between'>
   <div>
-  <Counters onReset={this.handleReset} onDeleting={this.handleDelete} onIncrement={this.handleIncrement} counters={this.state.counters}/>
+  <Counters onReset={this.handleReset} onDeleting={this.handleDelete} onIncrement={this.handleIncrement} counters={counters}/>
   </div>
   <div >
   <Movies/>

@@ -1,7 +1,7 @@
 import React from 'react';
-import lodash from 'lodash'
+import _ from 'lodash'
 const Pagenating=(movies,pageNumber,pageSize)=>{
  const startIndex=(pageNumber-1)*pageSize;
- return lodash(movies).slice(startIndex).take(pageNumber).value();
+  return _(movies).slice(startIndex).take(pageSize).value();
 }
 export default Pagenating;
