@@ -1,5 +1,5 @@
 import React from 'react'
-const ListGroup=({items,onSelecting,onSelectItem,selectedData})=>{
+const ListGroup=({items,onSelecting,onSelectItem})=>{
 
 return <React.Fragment>
 <ul className='pt-11 border-gray-600 border-b-4 rounded-lg '>
